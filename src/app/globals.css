@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'animate.css';
 
 :root {
   --background: #ffffff;
@@ -18,4 +19,446 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom styles for your components */
+
+.best-sellers {
+  @apply py-5 bg-gray-100;
+}
+
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5;
+}
+
+.product-card {
+  @apply border border-gray-300 rounded-lg p-2 text-center transition-transform transform hover:scale-105;
+}
+
+.checkout-form {
+  @apply flex flex-col max-w-md mx-auto;
+}
+
+.checkout-form input {
+  @apply mb-2 p-2 border border-gray-300 rounded;
+}
+
+.checkout-form button {
+  @apply p-2 bg-blue-600 text-white rounded cursor-pointer;
+}
+
+.featured-categories {
+  @apply py-5 bg-white;
+}
+
+.category-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5;
+}
+
+.category-card {
+  @apply text-center border border-gray-300 rounded-lg p-2;
+}
+
+.hero-section {
+  @apply bg-cover bg-center text-white text-center py-24 px-5;
+  background-image: url('/path/to/your/image.jpg'); /* Adjust the path as needed */
+}
+
+.footer {
+  @apply bg-gray-800 text-white text-center p-5;
+}
+
+.footer-links,
+.social-media {
+  @apply my-2;
+}
+
+.success-message {
+  @apply text-center p-12 bg-green-100;
+}
+
+.testimonials {
+  @apply py-5 bg-gray-100;
+}
+
+.testimonial-carousel {
+  @apply flex overflow-x-auto gap-5;
+}
+
+.testimonial-card {
+  @apply min-w-[300px] p-5 border border-gray-300 rounded-lg bg-white;
+}
+.header {
+  @apply flex items-center justify-between bg-white p-4 shadow-md;
+}
+
+.logo-image {
+  @apply h-10;
+}
+
+.nav {
+  @apply flex space-x-4;
+}
+
+.nav a {
+  @apply text-gray-800 hover:text-blue-600 transition-colors;
+}
+
+.cart {
+  @apply text-gray-800 hover:text-blue-600;
+}
+
+.user-actions {
+  position: relative;
+}
+
+.user-button {
+  @apply text-gray-800 hover:text-blue-600 focus:outline-none;
+}
+
+.dropdown {
+  @apply absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-10;
+}
+
+.dropdown a {
+  @apply block px-4 py-2 text-gray-800 hover:bg-gray-100;
+}
+
+.search-bar {
+  @apply flex items-center border border-gray-300 rounded;
+}
+
+.search-bar input {
+  @apply p-2 rounded-l;
+  width: 200px;
+}
+
+.search-bar button {
+  @apply p-2 bg-blue-600 text-white rounded-r;
+}
+
+
+/* globals.css */
+
+/* General Styles */
+.featured-categories {
+  padding: 20px; /* Add padding around the featured categories */
+}
+
+/* Grid Styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Category Card Styles */
+.category-card {
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+  position: relative; /* For positioning the badge */
+  border: 1px solid #e2e8f0; /* Light gray border */
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Badge Styles */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #4caf50; /* Green background for the badge */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Skeleton Loading Styles */
+.skeleton {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-img {
+  height: 120px;
+  background-color: #e0e0e0 ;
+  margin-bottom: 10px;
+}
+
+.skeleton-text {
+  height: 14px;
+  background-color: #e0e0e0;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+/* Button Styles */
+a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+  height: 50px; /* Adjust based on your logo's aspect ratio */
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #0070f3; /* Change to your desired hover color */
+}
+
+.cart-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.user-actions {
+  position: relative;
+}
+
+.user-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-link:hover {
+  background-color: #f0f0f0;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #0070f3;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-timer {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+padding: 10px;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.scroll-indicator {
+  font-size: 2rem;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.promotional-area {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.featured-categories {
+  background: linear-gradient(to right, #f0f4f8, #e0e7ff);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4757;
+  color: white;
+  font-weight: bold;
+  padding:  5px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.skeleton-img {
+  height: 192px; /* Adjust based on your design */
+  margin-bottom: 8px;
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+.skeleton-text {
+  width: 100%;
+}
+.best-sellers {
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  transition: transform 0.3s ease;
+}
+
+.product-card .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4757;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
